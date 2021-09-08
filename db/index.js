@@ -32,10 +32,11 @@ class DB {
 
   // Update the given employee's role
   updateEmployeeRole(employeeId, roleId) {
-    return this.connection
-      .query
+    return this.connection.query(
       // TODO: YOUR CODE HERE
-      ();
+      "UPDATE employee SET role_id = ? WHERE id = ?",
+      [employeeId, roleId]
+    );
   }
 
   // Update the given employee's manager
@@ -59,10 +60,11 @@ class DB {
 
   // Create a new role
   createRole(role) {
-    return this.connection
-      .query
+    return this.connection.query(
       // TODO: YOUR CODE HERE
-      ();
+      "INSERT INTO role SET ?",
+      role
+    );
   }
 
   // Find all departments, join with employees and roles and sum up utilized department budget
