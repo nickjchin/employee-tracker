@@ -21,13 +21,13 @@ CREATE TABLE role (
   -- MAKE CONSTRAINT 'ON DELETE CASCADE' (WITHOUT QUOTES) ON THIS FOREIGN KEY
   -- TODO: YOUR CODE HERE
 
-id INT AUTO_INCREMENT PRIMARY KEY,
-title VARCHAR(30),
-salary DECIMAL,
-department_id INT,
-FOREIGN KEY (department_id) 
-  REFERENCES department(id)
-  ON DELETE CASCADE  
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(30),
+  salary DECIMAL,
+  department_id INT,
+  FOREIGN KEY (department_id) 
+    REFERENCES department(id)
+    ON DELETE CASCADE  
 
 );
 
